@@ -22,3 +22,18 @@ SOLUTION:
         }
         return arrayWords.join(' ');
     }
+    
+ALTERNATIVE SOLUTION (NOT MINE):
+
+    function spinWords(str){
+      wordsArray = str.split(' ');
+      wordsArray.forEach(function(word, index){
+        if (word.length > 4) {
+          wordsArray[index] = word.split('').reverse().join('');
+        }
+      });
+      return wordsArray.join(' ');
+    }
+    
+    
+
